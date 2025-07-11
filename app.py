@@ -1,5 +1,5 @@
 import streamlit as st
-from dotenv import load_dotenv
+
 import os
 import docx
 from io import BytesIO
@@ -8,9 +8,7 @@ from resume_utils import extract_text_from_pdf
 from generator import generate_cover_letter, generate_resume_bullets, generate_full_resume
 from pdf_utils import create_resume_pdf
 
-# Load API key
-load_dotenv("key.env")
-openai_api_key = os.getenv("OPENAI_API_KEY")
+openai_api_key = st.secrets["api_keys"]["openai"]
 
 # Streamlit page configuration
 st.set_page_config(
