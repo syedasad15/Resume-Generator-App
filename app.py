@@ -81,7 +81,7 @@ with st.sidebar:
             st.session_state.template = None
             st.session_state.cover_letter_widget = ""
             st.session_state.full_resume_widget = ""
-            st.experimental_rerun()
+            st.rerun()
 
 # Main content area with tabs
 st.title("📄 Smart Resume & Cover Letter Generator")
@@ -217,5 +217,5 @@ if st.session_state.generated:
             )
 
 # Footer
-st.markdown("---")
-st.markdown("Powered by **xAI** | Built with **Streamlit** | © 2025")
+# st.markdown("---")
+# st.markdown("Powered by **xAI** | Built with **Streamlit** | © 2025")
